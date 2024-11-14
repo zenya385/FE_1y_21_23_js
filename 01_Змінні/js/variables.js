@@ -12,6 +12,18 @@ const mess = "Повідомлення для Аліни!"
 // console.log(data);
 
 
-const inputUser = prompt('щось')
+// const inputUser = prompt('щось')
 
-console.log(Number(inputUser));
+// console.log(Number(inputUser));
+// console.log('mess :>> ', mess);
+
+
+// const inputUser = prompt('щось')
+
+// if(!inputUser ){
+//     console.log(`Привіт! ${inputUser}` );
+// }else{
+//     console.log(`ВВедіть ім'я` );
+
+// }
+// console.log(inputUser);

@@ -4,17 +4,17 @@
  * - Повертає те на чому запнулось або останній операнд
  */
 
-//!  0 ; null; undefined; NaN; ""; false
+//!       0 ; null; undefined; NaN; ""; false
 
 // console.log( 1 && 4 );
 
 // console.log(1 && 4 && 7 && 'mango');
 
-// console.log(1 && false && 7 && 'mango');
+console.log(1 && false && 7 && 'mango');
 
 // console.log(1 && "false" && 7 && 'mango');
 
-// console.log( 10 && ' ' && 7 && 'mango');
+// console.log( 10 && '' && 7 && 'mango');
 
 
 // const num = 20;
