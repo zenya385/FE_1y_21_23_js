@@ -115,14 +115,14 @@ for (const car of cars) {
 
 const carAudi = cars[1].brend
 
-console.log('Audi :>> ', carAudi);
+// console.log('Audi :>> ', carAudi);
 
 
 
 const lastWeekTemps = [14, 25, 11];
 const currentWeekTemps = [23, 17, 18];
-const allTemps = [...lastWeekTemps, ...currentWeekTemps];
-console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+const allTemps = [...lastWeekTemps, 2, 3, ...currentWeekTemps, 3];
+// console.log(allTemps); // [14, 25, 11, 2, 3, 23, 17, 18, 3]
 
 
 const arr1 = [11,12,45,78,124];
@@ -132,4 +132,13 @@ const allArr3 = arr1.concat(arr2);
 
 const allArr4 = [...arr1, ...arr2]
 
-console.log(allArr4);
+// console.log(allArr4);
+
+
+const object1 = {a:1, b:2, c:3}
+const object2 = {x:5, y:6, c:10}
+const objectAll1 = {...object1, ...object2}
+const objectAll2 = {...object2, ...object1}
+
+console.log('objectAll1 :>> ', objectAll1);
+console.log('objectAll2 :>> ', objectAll2);
