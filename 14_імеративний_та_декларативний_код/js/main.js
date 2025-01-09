@@ -324,6 +324,37 @@ const totalScore = studentsR.reduce((total, student) => {
 
 const averageScore = totalScore / students.length;
 
+//%  ============================= Метод sort() ==============================
+//$ Метод sort() сортує елементи масиву, але на відміну від інших методів перебирання, він сортує вихідний масив.
+
+//$ Сортує і змінює вихідний масив.
+//$ Повертає змінений масив, тобто посилання на відсортований вихідний.
+//$ За замовчуванням сортує за зростанням.
+//$ Сортування відбувається шляхом приведення значень до рядка і порівняння порядкових номерів у таблиці Unicode.
+
+
+// правилне сортування чисел
+const scores = [61, 19, 2, 3, 7, 74, 35, 92, 56];
+
+const ascendingScores = [...scores].sort((a, b) => b - a);
+console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+
+
+const students1 = [
+  { name: "Манго", score: 83, courses: ["математика", "фізика"] },
+  { name: "Полі", score: 59, courses: ["інформатика", "математика"] },
+  { name: "Аякс", score: 37, courses: ["фізика", "біологія"] },
+  { name: "Ківі", score: 94, courses: ["література", "інформатика"] },
+];
+
+["математика", "фізика", "інформатика", "математика","фізика", "біологія", "література", "інформатика"]
+
+
+const uniqueSortedCourses = students1.flatMap(student => student.courses).filter((course, index, array)=> array.indexOf(course) === index)
+
+console.log('uniqueSortedCourses :>> ', uniqueSortedCourses);
+
 // // ================================================================================
 
 const users = [
@@ -430,42 +461,40 @@ const getUserNames = (users) => {
 //^ Завдання 6
 // Отримати масив користувачів, які потрапляють у вікову категорію від min до max років (поле age).
 
-//!   function getUsersWithAge(params){} // function declaration (оголошення функції)
+//!   function getUsersWithAge(params){}       // function declaration (оголошення функції)
 
 //!   const  getUsersWithAge =  function(params){}       // function expretion (функціональний вираз)
 
-//!   const getUsersWithAge = (params) => {}  // стрілочна
+//!   const getUsersWithAge = (params) => {}     // стрілочна
 
-//!   (params)=>{}  // анонімна стрілочна функція
+//!   (params)=>   // анонімна стрілочна функція
 
 // getUsersWithAge()
 
 const getUsersWithAge = (users, min, max) => {
   // твій код
 
-  const usersNameAgeCategory = users.filter(({name, age }) => 
-    {
-      //  const {id,
-      //     name,
-      //     email,
-      //     eyeColor,
-      //     friends,
-      //     isActive,
-      //     balance,
-      //     skills,
-      //     gender,
-      //     age} = user;
-      if (age > min && age < max) {
-        return name;
-      }
+  const usersNameAgeCategory = users.filter(({ name, age }) => {
+    //  const {id,
+    //     name,
+    //     email,
+    //     eyeColor,
+    //     friends,
+    //     isActive,
+    //     balance,
+    //     skills,
+    //     gender,
+    //     age} = user;
+    if (age > min && age < max) {
+      return name;
     }
-  );
+  });
   return usersNameAgeCategory;
 };
 
-console.log(getUsersWithAge(users, 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
+// console.log(getUsersWithAge(users, 20, 30)); // [об'єкт Ross Vazquez, об'єкт Elma Head, об'єкт Carey Barr]
 
-console.log(getUsersWithAge(users, 30, 40));
+// console.log(getUsersWithAge(users, 30, 40));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Blackburn Dotson, об'єкт Sheree Anthony]
 
 // // ================================================================
